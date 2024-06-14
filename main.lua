@@ -1,8 +1,9 @@
--- name: [CS] Azumanga Daioh: The Knuckleheads Pack!
--- description: Featuring Osaka, Tomo and Kagura!
+-- name: [CS] Azumanga Daioh 64!
+-- description: Featuring Osaka, Tomo and Kagura!\n\n\\#AAAAFF\\Github:\n\\#6666FF\\LukasATBK/char-select-azumanga-pack\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
+local TEXT_MOD_NAME = "Azumanga Daioh 64"
+local TEXT_MOD_VERSION = "Release 1"
 if not _G.charSelectExists then
-    local TEXT_MOD_NAME = "Knuckleheads Pack"
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nRequires the Character Select Mod\nto use as a Library!\n\nPlease turn on the Character Select Mod\nand Restart the Room!", 6)
     return 0
 end
@@ -164,9 +165,9 @@ local E_MODEL_KAGURAOUTFIT1 = smlua_model_util_get_id("kaguraoutfit1_geo")
 local E_MODEL_KAGURAOUTFIT2 = smlua_model_util_get_id("kaguraoutfit2_geo")
 
 -- Character Initialize
-local CT_OSAKA = _G.charSelect.character_add("Osaka", "Osaka often acts stuck in her own world, she is often prone to daydreaming.", "LukasATBK, Nokiaa, Azumadeline", {r = 228, g = 50, b = 50}, E_MODEL_OSAKAV2, CT_MARIO, TEX_OSAKAV2)
-local CT_TOMO = _G.charSelect.character_add("Tomo", "Tomo Takino!! A crazy-go-nuts high schooler.", "LukasATBK", {r = 144, g = 152, b = 201}, E_MODEL_TOMO, CT_MARIO, TEX_TOMO)
-local CT_KAGURA = _G.charSelect.character_add("Kagura", "Kagura brings a feisty, competitive spirit to Yukari's classroom.", "LukasATBK", {r = 54, g = 90, b = 90}, E_MODEL_KAGURA, CT_MARIO, TEX_KAGURA)
+local CT_OSAKA = _G.charSelect.character_add("Osaka", "Osaka often acts stuck in her own world, she is often prone to daydreaming.", "elrarosocial / Nokiaa / Azumadeline", {r = 228, g = 50, b = 50}, E_MODEL_OSAKAV2, CT_MARIO, TEX_OSAKAV2)
+local CT_TOMO = _G.charSelect.character_add("Tomo", "Tomo Takino!! A crazy-go-nuts high schooler.", "LukasATBK / elrarosocial", {r = 144, g = 152, b = 201}, E_MODEL_TOMO, CT_MARIO, TEX_TOMO)
+local CT_KAGURA = _G.charSelect.character_add("Kagura", "Kagura brings a feisty, competitive spirit to Yukari's classroom.", "LukasATBK / elrarosocial", {r = 54, g = 90, b = 90}, E_MODEL_KAGURA, CT_MARIO, TEX_KAGURA)
 
 -- Add Voices
 _G.charSelect.character_add_voice(E_MODEL_OSAKAV2, VOICETABLE_OSAKA)
@@ -281,6 +282,13 @@ local function hud_render()
     local inputLockTimerTo = latencyValueTable[_G.charSelect.get_options_status(_G.charSelect.optionTableRef.inputLatency) + 1]
 
     if altCostumes[currChar] ~= nil then
+        -- Render Mod Variond under CS version
+        local menuColor = _G.charSelect.get_menu_color()
+        djui_hud_set_color(menuColor.r, menuColor.g, menuColor.b, 255)
+        djui_hud_set_font(FONT_TINY)
+        local string = TEXT_MOD_NAME.." ("..TEXT_MOD_VERSION..")"
+        djui_hud_print_text(string, width - 5 - djui_hud_measure_text(string)*0.5, 3, 0.5)
+
         ---@type Controller
         local c = _G.charSelect.controller
         local currAlts = altCostumes[currChar]
@@ -290,8 +298,8 @@ local function hud_render()
         local inputLockTimerAnim = 0
 
         local buttonX = 20 * widthScale + buttonAnim
-        local x1 = buttonX - 5
-        local x2 = x1 + 75
+        local x1 = buttonX - 4
+        local x2 = x1 + 73
         local y = 97
 
         if charSelectAnim > 0 then
