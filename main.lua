@@ -1,4 +1,4 @@
--- name: [CS] Azumanga Daioh: The Knuckleheads pack!
+-- name: [CS] Azumanga Daioh: The Knuckleheads Pack!
 -- description: Featuring Osaka, Tomo and Kagura!
 
 if not _G.charSelectExists then
