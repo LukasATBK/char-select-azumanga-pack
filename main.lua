@@ -1,8 +1,8 @@
--- name: [CS] Azumanga Daioh: The Knuckleheads Pack!
+-- name: [CS] Azumanga Daioh 64
 -- description: Featuring Osaka, Tomo and Kagura!
 
 if not _G.charSelectExists then
-    local TEXT_MOD_NAME = "Knuckleheads Pack"
+    local TEXT_MOD_NAME = "Azumanga Daioh 64 Character Pack"
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nRequires the Character Select Mod\nto use as a Library!\n\nPlease turn on the Character Select Mod\nand Restart the Room!", 6)
     return 0
 end
