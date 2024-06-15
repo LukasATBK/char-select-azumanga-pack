@@ -189,13 +189,14 @@ _G.charSelect.character_add_voice(E_MODEL_KAGURAOUTFIT1, VOICETABLE_KAGURA)
 _G.charSelect.character_add_voice(E_MODEL_KAGURAOUTFIT2, VOICETABLE_KAGURA)
 
 -- Update Voicelines
+local character_get_voice, update_sound, update_snore = _G.charSelect.character_get_voice, _G.charSelect.voice.sound, _G.charSelect.voice.snore
 local function character_sounds(m, sound)
     local v = _G.charSelect.character_get_voice(m)
     if v == VOICETABLE_OSAKA
     or v == VOICETABLE_TOMO
     or v == VOICETABLE_KAGURA
     then
-        return _G.charSelect.voice.sound(m, sound)
+        return update_sound(m, sound)
     end
 end
 local function character_snore(m)
@@ -204,11 +205,39 @@ local function character_snore(m)
     or v == VOICETABLE_TOMO
     or v == VOICETABLE_KAGURA
     then
-        return _G.charSelect.voice.snore(m)
+        return update_snore(m)
     end
 end
+
 hook_event(HOOK_CHARACTER_SOUND, character_sounds)
 hook_event(HOOK_MARIO_UPDATE, character_snore)
+
+--------------------------------------------
+--- Alt Costume code from Paper Partners ---
+-- Modified by Squishy for Azumanga Daioh --
+--------------------------------------------
+
+local character_edit = _G.charSelect.character_edit
+local character_get_current_number = _G.charSelect.character_get_current_number
+local character_get_current_table = _G.charSelect.character_get_current_table
+local get_options_status = _G.charSelect.get_options_status
+local get_menu_color = _G.charSelect.get_menu_color
+local hook_render_in_menu = _G.charSelect.hook_render_in_menu
+
+local table_insert = table.insert
+local play_sound = play_sound
+local djui_hud_get_screen_width = djui_hud_get_screen_width
+local djui_hud_measure_text = djui_hud_measure_text
+local djui_hud_set_color = djui_hud_set_color
+local djui_hud_set_resolution = djui_hud_set_resolution
+local djui_hud_set_rotation = djui_hud_set_rotation
+local djui_hud_set_font = djui_hud_set_font
+local djui_hud_print_text = djui_hud_print_text
+local djui_hud_render_rect = djui_hud_render_rect
+local maxf = maxf
+local math_min = math.min
+local math_max = math.max
+local math_sin = math.sin
 
 local altCostumes = {
     [CT_OSAKA] = {
@@ -237,21 +266,20 @@ local altCostumes = {
     },
 }
 
--- Alt Costume code from Paper Partners, Modified by Squishy for Azumanga Pack --
 local function update_character_skin(currChar, currAlt)
     local currSkin = altCostumes[currChar][currAlt]
     if altCostumes[currChar].desc == nil then
-        altCostumes[currChar].desc = _G.charSelect.character_get_current_table().description
+        altCostumes[currChar].desc = character_get_current_table().description
     end
     local description = {}
     for i = 1, #altCostumes[currChar].desc do
-        table.insert(description, altCostumes[currChar].desc[i])
+        table_insert(description, altCostumes[currChar].desc[i])
     end
     if currSkin.name ~= "" then
-        table.insert(description, "")
-        table.insert(description, "Current Outfit: "..currSkin.name)
+        table_insert(description, "")
+        table_insert(description, "Current Outfit: "..currSkin.name)
     end
-    _G.charSelect.character_edit(currChar, nil, description, nil, nil, currSkin.model, nil, nil)
+    character_edit(currChar, nil, description, nil, nil, currSkin.model, nil, nil)
     local cameraToObject = gMarioStates[0].marioObj.header.gfx.cameraToObject
     play_sound(SOUND_MENU_MESSAGE_NEXT_PAGE, cameraToObject)
 end
@@ -266,24 +294,24 @@ local latencyValueTable = {12, 6, 3}
 local function hud_render()
     local width = djui_hud_get_screen_width() + 1.4
     local widthScale = maxf(width, 321.4) * MATH_DIVIDE_320
-    local currChar = _G.charSelect.character_get_current_number()
-    local charColors = _G.charSelect.character_get_current_table().color
+    local currChar = character_get_current_number()
+    local charColors = character_get_current_table().color
     
     -- Mimick button swaying, which is missing from the paper code
     local buttonAnim = 0
-    local charSelectAnim = _G.charSelect.get_options_status(_G.charSelect.optionTableRef.anims)
+    local charSelectAnim = get_options_status(_G.charSelect.optionTableRef.anims)
     if charSelectAnim > 0 then
         buttonAnimTimer = buttonAnimTimer + 1
-        buttonAnim = math.sin(buttonAnimTimer * 0.05) * 2.5 + 5
+        buttonAnim = math_sin(buttonAnimTimer * 0.05) * 2.5 + 5
     else
         buttonAnim = 10
     end
 
-    local inputLockTimerTo = latencyValueTable[_G.charSelect.get_options_status(_G.charSelect.optionTableRef.inputLatency) + 1]
+    local inputLockTimerTo = latencyValueTable[get_options_status(_G.charSelect.optionTableRef.inputLatency) + 1]
 
     if altCostumes[currChar] ~= nil then
         -- Render Mod Variond under CS version
-        local menuColor = _G.charSelect.get_menu_color()
+        local menuColor = get_menu_color()
         djui_hud_set_color(menuColor.r, menuColor.g, menuColor.b, 255)
         djui_hud_set_font(FONT_TINY)
         local string = TEXT_MOD_NAME.." ("..TEXT_MOD_VERSION..")"
@@ -304,8 +332,8 @@ local function hud_render()
 
         if charSelectAnim > 0 then
             inputLockTimerAnim = inputLockTimer/inputLockTimerTo * 3
-            x1 = x1 + math.min(inputLockTimerAnim, 0)
-            x2 = x2 + math.max(inputLockTimerAnim, 0)
+            x1 = x1 + math_min(inputLockTimerAnim, 0)
+            x2 = x2 + math_max(inputLockTimerAnim, 0)
         end
         -- Left Arrow
         if currAlts.currSkin > 1 then
@@ -319,7 +347,7 @@ local function hud_render()
             djui_hud_render_rect(buttonX, y - 3, 1, 10)
 
             if inputLockTimer == 0 and (c.buttonDown & L_JPAD ~= 0 or c.stickX < -0.5) then
-                currAlts.currSkin = math.max(currAlts.currSkin - 1, 1)
+                currAlts.currSkin = math_max(currAlts.currSkin - 1, 1)
                 update_character_skin(currChar, currAlts.currSkin)
                 inputLockTimer = -inputLockTimerTo
             end
@@ -351,4 +379,4 @@ local function hud_render()
     end
 end
 
-_G.charSelect.hook_render_in_menu(hud_render)
+hook_render_in_menu(hud_render)
