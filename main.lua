@@ -1,4 +1,4 @@
--- name: [CS] Azumanga Daioh 64!
+-- name: \\#f8d202\\[CS] \\#fb2f1c\\Azumanga Daioh \\#f8d202\\64!
 -- description: Featuring Osaka, Tomo and Kagura!\n\n\\#AAAAFF\\Github:\n\\#6666FF\\LukasATBK/char-select-azumanga-pack\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Azumanga Daioh 64"
@@ -61,7 +61,7 @@ local VOICETABLE_OSAKA = {
   [CHAR_SOUND_DOH] = 'Osaka_Dooh.ogg',
   [CHAR_SOUND_DROWNING] = 'Osaka_Drowning.ogg',
   [CHAR_SOUND_DYING] = 'Osaka_HuhhHuh_LostaLife.ogg',
-  [CHAR_SOUND_GROUND_POUND_WAH] = 'Osaka_punch2.ogg',
+  [CHAR_SOUND_GROUND_POUND_WAH] = 'Osaka_punch1.ogg',
   [CHAR_SOUND_HAHA] = 'Osaka_HaHaa.ogg',
   [CHAR_SOUND_HAHA_2] = 'Osaka_HaHaa.ogg',
   [CHAR_SOUND_HERE_WE_GO] = 'Osaka_hereWeGo.ogg',
@@ -84,9 +84,9 @@ local VOICETABLE_OSAKA = {
   [CHAR_SOUND_YAH_WAH_HOO] = {'Osaka_jump1.ogg', 'Osaka_jump1.ogg', 'Osaka_jump1.ogg'},
   [CHAR_SOUND_YAWNING] = 'Osaka_Yawning.ogg',
   [CHAR_SOUND_PANTING] = {'Osaka_1hpLeft.ogg', 'Osaka_1hpLeft.ogg', 'Osaka_1hpLeft.ogg'},
-  [CHAR_SOUND_COUGHING1] = 'silence.ogg',
+  [CHAR_SOUND_COUGHING1] = 'Osaka_coughing.ogg',
   [CHAR_SOUND_COUGHING2] = 'silence.ogg',
-  [CHAR_SOUND_COUGHING3] = 'silence.ogg',
+  [CHAR_SOUND_COUGHING3] = 'Osaka_coughing.ogg',
   [CHAR_SOUND_MAMA_MIA] = 'Osaka_MammaMia.ogg',
   [CHAR_SOUND_IMA_TIRED] = 'Osaka_ImaTired.ogg',
   [CHAR_SOUND_LETS_A_GO] = 'Osaka_LetsGoAllTheWayIn.ogg',
@@ -105,7 +105,7 @@ local VOICETABLE_KAGURA = {
   [CHAR_SOUND_DOH] = 'Kagura_Dooh.ogg',
   [CHAR_SOUND_DROWNING] = 'Kagura_Drowning.ogg',
   [CHAR_SOUND_DYING] = 'Kagura_HuhhHuh_LostaLife.ogg',
-  [CHAR_SOUND_GROUND_POUND_WAH] = 'Kagura_punch3.ogg',
+  [CHAR_SOUND_GROUND_POUND_WAH] = 'Kagura_punch2.ogg',
   [CHAR_SOUND_HAHA] = 'Kagura_HaHaa.ogg',
   [CHAR_SOUND_HAHA_2] = 'Kagura_HaHaa.ogg',
   [CHAR_SOUND_HERE_WE_GO] = 'Kagura_hereWeGo.ogg',
@@ -151,6 +151,7 @@ local E_MODEL_OSAKASUMMER = smlua_model_util_get_id("osakasummer_geo")
 local E_MODEL_OSAKASPORTS = smlua_model_util_get_id("osakasports_geo")
 local E_MODEL_OSAKAOUTFIT1 = smlua_model_util_get_id("osakaoutfit1_geo")
 local E_MODEL_OSAKAOUTFIT2 = smlua_model_util_get_id("osakaoutfit2_geo")
+local E_MODEL_OSAKALEGACY = smlua_model_util_get_id("osakalegacy_geo")
 
 local E_MODEL_TOMO = smlua_model_util_get_id("tomo_geo")
 local E_MODEL_TOMOSUMMER = smlua_model_util_get_id("tomosummer_geo")
@@ -175,6 +176,7 @@ _G.charSelect.character_add_voice(E_MODEL_OSAKASUMMER, VOICETABLE_OSAKA)
 _G.charSelect.character_add_voice(E_MODEL_OSAKASPORTS, VOICETABLE_OSAKA)
 _G.charSelect.character_add_voice(E_MODEL_OSAKAOUTFIT1, VOICETABLE_OSAKA)
 _G.charSelect.character_add_voice(E_MODEL_OSAKAOUTFIT2, VOICETABLE_OSAKA)
+_G.charSelect.character_add_voice(E_MODEL_OSAKALEGACY, VOICETABLE_OSAKA)
 
 _G.charSelect.character_add_voice(E_MODEL_TOMO, VOICETABLE_TOMO)
 _G.charSelect.character_add_voice(E_MODEL_TOMOSUMMER, VOICETABLE_TOMO)
@@ -247,6 +249,7 @@ local altCostumes = {
         {name = "Sports", model = E_MODEL_OSAKASPORTS,},
         {name = "Outfit 1", model = E_MODEL_OSAKAOUTFIT1,},
         {name = "Outfit 2", model = E_MODEL_OSAKAOUTFIT2,},
+        {name = "Legacy", model = E_MODEL_OSAKALEGACY,},
     },
     [CT_TOMO] = {
         currSkin = 1,
