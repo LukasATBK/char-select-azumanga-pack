@@ -29,7 +29,7 @@
 - To Play the Mod:
    - [SM64CoopDX](https://github.com/coop-deluxe/sm64coopdx)
    - [Character Select](https://github.com/Squishy6094/character-select-coop) (v1.8 or higher)
-   - [Azumanga Daioh 64](https://github.com/LukasATBK/char-select-azumanga-pack/releases/latest) (This pack!)
+   - [Azumanga Daioh 64 Github Repo](https://github.com/LukasATBK/char-select-azumanga-pack/releases/latest) or [Azumanga Daioh 64 SM64COOPDX Forum post](https://mods.sm64coopdx.com/mods/azumanga-daioh-64-pack.205/)(This pack!)
 - To Open `.blend` files:
    - [Blender v3.6](https://www.blender.org/download/releases/3-6/)
    - [Fast64](https://github.com/Fast-64/fast64])
