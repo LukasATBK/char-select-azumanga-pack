@@ -43,5 +43,5 @@
  ## Extra
 - [Discord Server](https://discord.gg/nABcj6V3m6)
 - [SM64CoopDX Forums Post](https://mods.sm64coopdx.com/mods/azumanga-daioh-64-pack.205/)
-- [Transparent renders, logos, HD Models, etc](https://www.mediafire.com/folder/omkm3wo4jtjm6/Azumanga64_Stuff) - 3D Modelling, Project main developer
+- [Transparent renders, logos, HD Models, etc](https://www.mediafire.com/folder/omkm3wo4jtjm6/Azumanga64_Stuff)
 
