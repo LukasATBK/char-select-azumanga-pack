@@ -36,6 +36,6 @@
 
 ## Credits
 - [LukasATBK](https://allmylinks.com/lukasatbk) - 3D Modelling, Project main developer
-- [elrarosocial](https://twitter.com/elrarosocial) - Voice clips ripping and extra help
+- [KasugAxel](https://twitter.com/kasugaxel) - Voice clips ripping and extra help
 - [Squishy6094](https://github.com/Squishy6094) - Optimization, Outfit Selector, Github Manager
-- [Nokiaa__](https://twitter.com/Nokiaa__) & [Azumadeline](https://twitter.com/azumadeline) - Osaka's model
+- [Nokiaa__](https://twitter.com/Nokiaa__) & [Azumadeline](https://twitter.com/azumadeline) - Osaka's Legacy model
