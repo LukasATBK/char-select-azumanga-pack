@@ -166,9 +166,9 @@ local E_MODEL_KAGURAOUTFIT1 = smlua_model_util_get_id("kaguraoutfit1_geo")
 local E_MODEL_KAGURAOUTFIT2 = smlua_model_util_get_id("kaguraoutfit2_geo")
 
 -- Character Initialize
-local CT_OSAKA = _G.charSelect.character_add("Osaka", "Osaka often acts stuck in her own world, she is often prone to daydreaming.", "elrarosocial / Nokiaa / Azumadeline", {r = 228, g = 50, b = 50}, E_MODEL_OSAKAV2, CT_MARIO, TEX_OSAKAV2)
-local CT_TOMO = _G.charSelect.character_add("Tomo", "Tomo Takino!! A crazy-go-nuts high schooler.", "LukasATBK / elrarosocial", {r = 144, g = 152, b = 201}, E_MODEL_TOMO, CT_MARIO, TEX_TOMO)
-local CT_KAGURA = _G.charSelect.character_add("Kagura", "Kagura brings a feisty, competitive spirit to Yukari's classroom.", "LukasATBK / elrarosocial", {r = 54, g = 90, b = 90}, E_MODEL_KAGURA, CT_MARIO, TEX_KAGURA)
+local CT_OSAKA = _G.charSelect.character_add("Osaka", "Osaka often acts stuck in her own world, she is often prone to daydreaming.", "KasugAxel / Nokiaa / Azumadeline", {r = 228, g = 50, b = 50}, E_MODEL_OSAKAV2, CT_MARIO, TEX_OSAKAV2)
+local CT_TOMO = _G.charSelect.character_add("Tomo", "Tomo Takino!! A crazy-go-nuts high schooler.", "LukasATBK / KasugAxel", {r = 144, g = 152, b = 201}, E_MODEL_TOMO, CT_MARIO, TEX_TOMO)
+local CT_KAGURA = _G.charSelect.character_add("Kagura", "Kagura brings a feisty, competitive spirit to Yukari's classroom.", "LukasATBK / KasugAxel", {r = 54, g = 90, b = 90}, E_MODEL_KAGURA, CT_MARIO, TEX_KAGURA)
 
 -- Add Voices
 _G.charSelect.character_add_voice(E_MODEL_OSAKAV2, VOICETABLE_OSAKA)
