@@ -39,3 +39,7 @@
 - [KasugAxel](https://twitter.com/kasugaxel) - Voice clips ripping and extra help
 - [Squishy6094](https://github.com/Squishy6094) - Optimization, Outfit Selector, Github Manager
 - [Nokiaa__](https://twitter.com/Nokiaa__) & [Azumadeline](https://twitter.com/azumadeline) - Osaka's Legacy model
+
+ ## Extra
+- [Transparent renders, logos, HD Models, etc](https://www.mediafire.com/folder/omkm3wo4jtjm6/Azumanga64_Stuff) - 3D Modelling, Project main developer
+
