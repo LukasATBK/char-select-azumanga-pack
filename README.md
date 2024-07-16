@@ -39,6 +39,7 @@
 - [KasugAxel](https://twitter.com/kasugaxel) - Voice clips ripping and extra help
 - [Squishy6094](https://github.com/Squishy6094) - Optimization, Outfit Selector, Github Manager
 - [Nokiaa__](https://twitter.com/Nokiaa__) & [Azumadeline](https://twitter.com/azumadeline) - Osaka's Legacy model
+- [UltimateKnux](https://twitter.com/KnuxUltimate) - Key art
 
  ## Extra
 - [Discord Server](https://discord.gg/nABcj6V3m6)
