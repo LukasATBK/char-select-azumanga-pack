@@ -3,22 +3,22 @@
 
 ### <p align=center>Azumanga Daioh 64: The Knuckleheads Pack!</p>
 
- <p align=center>A Model Pack for SM64CoopDX and Character Select adding characters from Azumanga Daioh!</p>
+ <p align=center>A Model Pack for SM64CoopDX and Character Select adding characters and pets from Azumanga Daioh!</p>
  
 ## Release Plans
 
  Our timeline of who we plan to add to the Azumanga Pack
 
-- **Release 1** (Current Release)
+- **Release 1**
     - <img src="textures/osakav2-icon.png" height="20"> Osaka
     - <img src="textures/tomo-icon.png" height="20"> Tomo
     - <img src="textures/kagura-icon.png" height="20"> Kagura
-- **Release 2**
-    - Chiyo
-    - Sakaki
-    - Yomi
-    - Kaorin
-    - Chihiro
+- **Release 2** (Current Release)
+    - <img src="textures/chiyo-icon.png" height="20"> Chiyo
+    - <img src="textures/sakaki-icon.png" height="20"> Sakaki
+    - <img src="textures/yomi-icon.png" height="20"> Yomi
+    - <img src="textures/kaori-icon.png" height="20"> Kaorin
+    - <img src="textures/chihiro-icon.png" height="20"> Chihiro
 - **Release 3**
     - Yukari
     - Nyamo
@@ -28,11 +28,12 @@
 ## Requirements
 - To Play the Mod:
    - [SM64CoopDX](https://github.com/coop-deluxe/sm64coopdx)
-   - [Character Select](https://github.com/Squishy6094/character-select-coop) (v1.8 or higher)
+   - [Character Select](https://github.com/Squishy6094/character-select-coop) (v1.11 or higher)
    - [Azumanga Daioh 64 Github Repo](https://github.com/LukasATBK/char-select-azumanga-pack/releases/latest) or [Azumanga Daioh 64 SM64COOPDX Forum post](https://mods.sm64coopdx.com/mods/azumanga-daioh-64-pack.205/)(This pack!)
+   - [Widdle-Pets](https://github.com/wibblus/widdle-pets)
 - To Open `.blend` files:
    - [Blender v3.6](https://www.blender.org/download/releases/3-6/)
-   - [Fast64](https://github.com/Fast-64/fast64])
+   - [Fast64](https://github.com/coop-deluxe/fast64)
 
 ## Credits
 - [LukasATBK](https://allmylinks.com/lukasatbk) - 3D Modelling, Project main developer
