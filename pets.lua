@@ -1,3 +1,4 @@
+
 if not _G.wpets then return end
 
 --ADD MODELS
@@ -103,7 +104,7 @@ _G.wpets.set_pet_sounds(ID_MINICHIYO, {
 	spawn = 'petChiyo_spawn.ogg',
 	happy = 'petChiyo_happy.ogg',
 	vanish = 'petChiyo_vanish.ogg',
-	step = 'petChiyo_step.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_PETCHIYOCHICHI, {
 	spawn = 'petChiyochichi_spawn.ogg',
@@ -115,48 +116,48 @@ _G.wpets.set_pet_sounds(ID_TADAKICHISAN, {
 	spawn = 'petTadakichi_spawn.ogg',
 	happy = 'petTadakichi_happy.ogg',
 	vanish = 'petTadakichi_vanish.ogg',
-	step = 'petTadakichi_step.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_MAYA, {
 	spawn = nekosfx_spawn,
 	happy = nekosfx_happy,
 	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_KAMINEKO, {
-	spawn = nekosfx_spawn,
-	happy = nekosfx_happy,
-	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	spawn = 'petKamineko_spawn.ogg',
+	happy = 'petKamineko_happy.ogg',
+	vanish = 'petKamineko_vanish.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_KAMINEKONORMAL, {
-	spawn = nekosfx_spawn,
-	happy = nekosfx_happy,
-	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	spawn = 'petKamineko_spawn.ogg',
+	happy = 'petKamineko_happy.ogg',
+	vanish = 'petKamineko_vanish.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_NEKO1, {
-	spawn = nekosfx_spawn,
-	happy = nekosfx_happy,
-	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	spawn = 'petNeko_spawn.ogg',
+	happy = 'petNeko_happy.ogg',
+	vanish = 'petNeko_vanish.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_NEKO2, {
-	spawn = nekosfx_spawn,
-	happy = nekosfx_happy,
-	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	spawn = 'petNeko_spawn.ogg',
+	happy = 'petNeko_happy.ogg',
+	vanish = 'petNeko_vanish.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_NEKO3, {
-	spawn = nekosfx_spawn,
-	happy = nekosfx_happy,
-	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	spawn = 'petNeko_spawn.ogg',
+	happy = 'petNeko_happy.ogg',
+	vanish = 'petNeko_vanish.ogg',
+	step = 'Step.ogg',
 })
 _G.wpets.set_pet_sounds(ID_NEKO4, {
-	spawn = nekosfx_spawn,
-	happy = nekosfx_happy,
-	vanish = nekosfx_vanish,
-	step = nekosfx_step,
+	spawn = 'petNeko_spawn.ogg',
+	happy = 'petNeko_happy.ogg',
+	vanish = 'petNeko_vanish.ogg',
+	step = 'Step.ogg',
 })
 
