@@ -1,5 +1,5 @@
 -- name: \\#f8d202\\[CS] \\#fb2f1c\\Azumanga Daioh \\#f8d202\\64! \\#fb2f1c\\R2
--- description: [DEV VERSION] School years, your best years!\n\n\\#AAAAFF\\Github:\n\\#6666FF\\LukasATBK/char-select-azumanga-pack\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!\n\n\\#AAAAFF\\This Pack includes pets, they require Widdle Pets to use as a Library!
+-- description: [DEV BUILD]\nSchool years, the best years of your life!\n\n\\#AAAAFF\\Github:\n\\#6666FF\\LukasATBK/char-select-azumanga-pack\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!\n\n\\#AAAAFF\\This Pack includes pets, they require Widdle Pets to use as a Library!
 
 local TEXT_MOD_NAME = "Azumanga Daioh 64"
 local TEXT_MOD_VERSION = "Release 2"
@@ -17,6 +17,15 @@ local TEX_YOMI = get_texture_info("yomi-icon")
 local TEX_KAORI = get_texture_info("kaori-icon")
 local TEX_CHIHIRO = get_texture_info("chihiro-icon")
 local TEX_AZUTOWER = get_texture_info("azutower-icon")
+
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Lukas ATBK", "3D Modeller, Programmer")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "KasugAxel", "Voice clips ripping")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Squishy6094", "Optimization, Outfit Selector")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Seymour", "Neko's base model")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "WiddlePets API")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Nokiaa__", "Osaka's Legacy Model")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Azumadeline", "Osaka's Legacy Model")
+
 
 local HEALTH_METER_AZU= {
     label = {
@@ -809,6 +818,7 @@ local function character_snore(m)
     then
         return update_snore(m)
     end
+	
 end
 
 hook_event(HOOK_CHARACTER_SOUND, character_sounds)
