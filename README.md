@@ -3,11 +3,11 @@
 
 ### <p align=center>Azumanga Daioh 64: The Knuckleheads Pack!</p>
 
- <p align=center>A Model Pack for SM64CoopDX and Character Select adding characters and pets from Azumanga Daioh!</p>
+ <p align=center>A Character Select Model Pack for SM64CoopDX adding characters and pets from Azumanga Daioh!</p>
  
 ## Release Plans
 
- Our timeline of who we plan to add to the Azumanga Pack
+ Our timeline of who we plan to add to the Azumanga Daioh 64 Pack:
 
 - **Release 1**
     - <img src="textures/osakav2-icon.png" height="20"> Osaka
@@ -29,7 +29,7 @@
 - To Play the Mod:
    - [SM64CoopDX](https://github.com/coop-deluxe/sm64coopdx)
    - [Character Select](https://github.com/Squishy6094/character-select-coop) (v1.11 or higher)
-   - [Azumanga Daioh 64 Github Repo](https://github.com/LukasATBK/char-select-azumanga-pack/releases/latest) or [Azumanga Daioh 64 SM64COOPDX Forum post](https://mods.sm64coopdx.com/mods/azumanga-daioh-64-pack.205/)(This pack!)
+   - [Azumanga Daioh 64 Github Repo](https://github.com/LukasATBK/char-select-azumanga-pack/releases/latest) or [Azumanga Daioh 64 SM64COOPDX Forum post](https://mods.sm64coopdx.com/mods/azumanga-daioh-64-pack.205/) (This pack!)
    - [Widdle-Pets](https://github.com/wibblus/widdle-pets)
 - To Open `.blend` files:
    - [Blender v3.6](https://www.blender.org/download/releases/3-6/)
