@@ -18,15 +18,6 @@ local TEX_KAORI = get_texture_info("kaori-icon")
 local TEX_CHIHIRO = get_texture_info("chihiro-icon")
 local TEX_AZUTOWER = get_texture_info("azutower-icon")
 
-_G.charSelect.credit_add(TEXT_MOD_NAME, "Lukas ATBK", "3D Modeller, Programmer")
-_G.charSelect.credit_add(TEXT_MOD_NAME, "KasugAxel", "Voice clips ripping")
-_G.charSelect.credit_add(TEXT_MOD_NAME, "Squishy6094", "Optimization, Outfit Selector")
-_G.charSelect.credit_add(TEXT_MOD_NAME, "Seymour", "Neko's base model")
-_G.charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "WiddlePets API")
-_G.charSelect.credit_add(TEXT_MOD_NAME, "Nokiaa__", "Osaka's Legacy Model")
-_G.charSelect.credit_add(TEXT_MOD_NAME, "Azumadeline", "Osaka's Legacy Model")
-
-
 local HEALTH_METER_AZU= {
     label = {
         left = get_texture_info("azuhp_left"),
@@ -820,6 +811,15 @@ local function character_snore(m)
     end
 	
 end
+
+
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Lukas ATBK", "3D Modeller, Programmer")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "KasugAxel", "Voice clips ripping")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Squishy6094", "Optimization, Outfit Selector")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Seymour", "Neko's base model")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "WiddlePets API")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Nokiaa__", "Osaka's Legacy Model")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Azumadeline", "Osaka's Legacy Model")
 
 hook_event(HOOK_CHARACTER_SOUND, character_sounds)
 hook_event(HOOK_MARIO_UPDATE, character_snore)
