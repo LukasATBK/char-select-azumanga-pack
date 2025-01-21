@@ -1,7 +1,7 @@
 
 <p align=center> <img src="images/azumanga-daioh-main-art.png" width="720"> </p>
 
-### <p align=center>Azumanga Daioh 64: The Knuckleheads Pack!</p>
+### <p align=center>Azumanga Daioh 64: The Character Pack!</p>
 
  <p align=center>A Character Select Model Pack for SM64CoopDX adding characters and pets from Azumanga Daioh!</p>
  
