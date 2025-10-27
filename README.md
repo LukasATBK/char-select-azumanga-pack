@@ -1,5 +1,5 @@
 
-<p align=center> <img src="images/azumanga-daioh-main-art.png" width="720"> </p>
+<p align=center> <img src="images/AzumangaDaioh64_Release2_Art.png" width="720"> </p>
 
 ### <p align=center>Azumanga Daioh 64: The Character Pack!</p>
 
